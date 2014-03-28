@@ -1,0 +1,1 @@
+These are my labs from my C programming course. The original instructions given to us are in each folder.
