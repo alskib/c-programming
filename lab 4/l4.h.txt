@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char lname[15];
+    char fname[15];
+    char dept[20];
+    float payRate;
+    char eyeColor[10];
+} employee;
+
+void sort(employee *emp, int numEntries);
+void psort(employee *emp, int ptr[], int numEntries);
+void arithmeticSort(employee *emp, int numEntries);
+void printData(employee *emp, int numEntries, FILE *outFile);
+void printDataPtr(employee *emp, int ptr[], int numEntries, FILE *outFile);
+void printDataArith(employee *emp, int numEntries, FILE *outFile);
+void copyStruct(employee *empDst, employee *empSrc, int numEntries);

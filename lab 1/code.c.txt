@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float hours, payrate;
+    float grossPay;
+    float ytd;
+    double FICATaxedAmt;
+    double FICA = 0.0678;
+    double FICALimit = 69782;
+    char processAnswer = 'Y';
+    int lineCount = 0;
+    
+    FILE *outFile;
+    char fileOutName[] = "lab1out.txt";
+    char overwrite;
+    
+    outFile = fopen(fileOutName, "w");
+    
+    if (outFile != NULL) {
+        printf("Existing output file found. Overwrite? (Y/N)");
+        scanf("%c", &overwrite);
+        if (overwrite == 'N' || overwrite == 'n') {
+            fclose(outFile);
+            printf("\nFile will not be overwritten. Terminating.");
+            exit(1);
+        } else {
+            printf("File will be overwritten.\n");
+        }
+    }
+        
+    fprintf(outFile, "%-s %10s %10s %10s\n", "Line #", "YTD   ", "Gross ", "FICA Tax ");
+    
+    while (processAnswer == 'Y' || processAnswer == 'y') {
+        
+        lineCount++;
+                
+        printf("Enter YTD: ");
+        scanf("%f", &ytd);
+        
+        printf("Enter gross pay: ");
+        scanf("%f", &grossPay);
+        
+        if (ytd >= FICALimit) {
+            FICATaxedAmt = 0;
+        } else if (ytd + grossPay <= FICALimit) {
+            FICATaxedAmt = grossPay * FICA;
+        } else {
+            FICATaxedAmt = FICA * (FICALimit - ytd);
+        }
+        
+        fprintf(outFile, "%-6d %10.2f %10.2f %10.2f\n", lineCount, ytd, grossPay, FICATaxedAmt);
+        
+        printf("Process new employee? (Y/N) ");
+        scanf(" %c", &processAnswer);
+        
+    }
+	
+    fclose(outFile);
+    
+    return(0);
+
+}

@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "l3.h"
+#include <math.h>
+#include <dlfcn.h>
+
+int main() {
+
+        void *handle;
+        char *err;
+
+        void (*sphere_d)(float rad,float *sur, float *vol);
+        float (*volCylinder_d)(float radius, float height);
+        float (*sumFloats_d)(float array[], int numFloats);
+        double (*computeSine_d)(float angle);
+        int (*factorial_d)(int n);
+
+        handle = dlopen("./libl3.so", RTLD_LAZY);
+        if (handle == (void*)0) {
+                fputs(dlerror(), stderr);
+                exit(-1);
+        }
+
+        sphere_d = dlsym(handle, "sphere");
+        err = dlerror();
+        if (err != NULL) {
+                fputs (err, stderr);
+                exit(-1);
+        }
+
+        volCylinder_d = dlsym(handle, "volCylinder");
+        err = dlerror();
+        if (err != NULL) {
+                fputs (err, stderr);
+                exit(-1);
+        }
+
+        sumFloats_d = dlsym(handle, "sumFloats");
+        err = dlerror();
+        if (err != NULL) {
+                fputs (err, stderr);
+                exit(-1);
+        }
+
+        computeSine_d = dlsym(handle, "computeSine");
+        err = dlerror();
+        if (err != NULL) {
+                fputs (err, stderr);
+                exit(-1);
+        }
+
+        factorial_d = dlsym(handle, "factorial");
+        err = dlerror();
+        if (err != NULL) {
+                fputs (err, stderr);
+                exit(-1);
+        }
+
+        printf("\n\t\tFranklin Leung\n");
+        printf("\t\t     Lab 3\n\n");
+
+        float sphRadius, cylRadius, cylHeight, cylVolume, sphSurface, sphVolume;
+
+        printf("Enter radius of sphere: ");
+        scanf("%f", &sphRadius);
+
+        (*sphere_d)(sphRadius, &sphSurface, &sphVolume);
+        printf("Sphere surface area: %f\nSphere total Volume: %f\n\n", sphSurface, sphVolume);
+
+        printf("Enter radius of cylinder: ");
+        scanf("%f", &cylRadius);
+
+        printf("Enter height of cylinder: ");
+        scanf("%f", &cylHeight);
+
+        cylVolume = (*volCylinder_d)(cylRadius, cylHeight);
+        printf("Cylinder volume: %f\n\n", cylVolume);
+
+        int arraySize;
+        printf("Enter number of elements in array: ");
+        scanf("%d", &arraySize);
+
+        float floatArray[arraySize];
+
+        int i;
+        float temp;
+        for (i = 0; i < arraySize; i++) {
+                printf("Enter element %d: ", i);
+                scanf("%f", &temp);
+                floatArray[i] = temp;
+        }
+
+        printf("\n-----------------\n");
+        printf(" UNSORTED ARRAY\n");
+        for (i = 0; i < arraySize; i++) {
+                printf(" Array[%d] = %g\n", i, floatArray[i]);
+        }
+        printf("--------------\n");
+
+        float sum = (*sumFloats)(floatArray, arraySize);
+
+        printf("\n---------------\n");
+        printf(" SORTED ARRAY\n");
+        for (i = 0; i < arraySize; i++) {
+                printf(" Array[%d] = %g\n", i, floatArray[i]);
+        }
+        printf("--------------\n");
+
+        printf("\nSum of floats: %g\n", sum);
+
+        float angle;
+
+        printf("Angle (1) to be calculated: ");
+        scanf("%f", &angle);
+        printf("Sine of angle %f is: %g\n", angle, (*computeSine)(angle));
+
+        printf("Angle (2) to be calculated: ");
+        scanf("%f", &angle);
+        printf("Sine of angle %f is: %g\n", angle, (*computeSine)(angle));
+
+        printf("Angle (3) to be calculated: ");
+        scanf("%f", &angle);
+        printf("Sine of angle %f is: %g\n", angle, (*computeSine)(angle));
+
+        dlclose(handle);
+        return (0);
+}

@@ -1,0 +1,22 @@
+testA: app/l5m.c libl5.so
+        gcc -ll5 -L. -o testA app/l5m.c -ldl
+
+libl5.so : gcd.o mul.o exp.o div.o
+        gcc -shared -o libl5.so *.o
+
+div.o : lib/div.c lib/l5.h
+        gcc -fPIC -c lib/div.c
+
+exp.o : lib/exp.c lib/l5.h
+        gcc -fPIC -c lib/exp.c
+
+mul.o : lib/mul.c lib/l5.h
+        gcc -fPIC -c lib/mul.c
+
+gcd.o : lib/gcd.c lib/l5.h
+        gcc -fPIC -c lib/gcd.c
+
+-PHONY: clean
+
+clean:
+        rm *.o

@@ -1,0 +1,4 @@
+make
+make clean
+export LD_LIBRARY_PATH=./
+./testA < values.txt | tee lab5outA.txt

@@ -1,0 +1,9 @@
+#ifndef LIB_H
+#define LIB_H
+
+extern int gcd(int m, int n);
+extern int mul(int m, int n);
+extern int div(int m, int n);
+extern int exp(int m, int n);
+
+#endif /* LIB_H */

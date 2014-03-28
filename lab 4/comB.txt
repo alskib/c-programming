@@ -1,0 +1,4 @@
+make
+make clean
+export LD_LIBRARY_PATH=./
+./testB

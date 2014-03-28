@@ -1,0 +1,4 @@
+gcc -c l3.c
+ar -cru libl3.a l3.o
+gcc -o testC l3m.c -L. -ll3 -lm
+./testC < values.txt | tee lab3outC.txt

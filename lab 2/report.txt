@@ -1,0 +1,80 @@
+                                  ACME Sports Inc.
+                         We are the best, you use the best!
+                              Mon Apr 22 16:50:45 2013
+
+                ACME
+Emp #  Given           Surname         Dept        New YTD         Gross        FICA          Net
+
+12     Nicholas        Arauza          Acct      $12,345.78       $529.60      $35.91      $493.69 
+6      Brian           Barton          Acct      $66,600.00     $1,371.52      $27.12    $1,344.40 
+10     Drew            Carlson         Acct      $66,600.00       $100.00       $6.78       $93.22 
+22     Jillian         Cleek           Acct      $78,342.56     $1,515.71       $0.00    $1,515.71 
+
+Page totals:                                                    $3,516.83      $69.81    $3,447.03 
+
+                                                                                        Page 1
+
+
+                ACME
+Emp #  Given           Surname         Dept        New YTD         Gross        FICA          Net
+
+24     Charles         Funk            Acct       $1,358.34       $977.25      $66.26     $910.100 
+                                                                 --------    --------     --------
+                                               Acct totals:     $4,494.09     $136.06    $4,358.02 
+
+13     Kevin           Gibbs           DP       $126,786.23     $5,631.36       $0.00    $5,631.36 
+                                                                 --------    --------     --------
+                                                 DP totals:     $5,631.36       $0.00    $5,631.36 
+
+5      Bradley         Houck           Mgt      $673,478.31     $7,502.40       $0.00    $7,502.40 
+3      Evan            Leky            Mgt      $134,234.34     $4,335.11       $0.00    $4,335.11 
+                                                                 --------    --------     --------
+                                                Mgt totals:    $11,837.51       $0.00   $11,837.51 
+
+
+Page totals:                                                   $18,446.12      $66.26   $18,379.86 
+
+                                                                                        Page 2
+
+
+                ACME
+Emp #  Given           Surname         Dept        New YTD         Gross        FICA          Net
+
+1      Franklin        Leung           Sales     $11,345.22     $1,924.18     $130.46    $1,793.72 
+4      Yanxin          Liu             Sales        $234.56       $683.08      $46.31      $636.77 
+15     David           Miller          Sales      $2,342.34     $1,348.42      $91.42    $1,257.00 
+17     Erik            Morin           Sales     $67,000.00     $1,369.20       $0.00    $1,369.20 
+                                                                 --------    --------     --------
+                                              Sales totals:     $5,324.89     $268.20    $5,056.69 
+
+
+Page totals:                                                    $5,324.89     $268.20    $5,056.69 
+
+                                                                                        Page 3
+
+
+                ACME
+Emp #  Given           Surname         Dept        New YTD         Gross        FICA          Net
+
+12     Baily           Nicholas        Inven     $12,345.78       $529.60      $35.91      $493.69 
+6      Ritesh          Rana            Inven     $66,600.00     $4,441.52      $27.12    $4,414.40 
+10     Luis            Rios            Inven     $66,600.00       $100.00       $6.78       $93.22 
+22     Joseph          Sanchez         Inven     $78,342.00     $1,882.71       $0.00    $1,882.71 
+                                                                 --------    --------     --------
+                                              Inven totals:     $6,953.83      $69.81    $6,884.03 
+
+
+Page totals:                                                    $6,953.83      $69.81    $6,884.03 
+
+                                                                                        Page 4
+
+
+                                   Report Summary
+
+Records processed: 16
+Total gross: $34,241.68 
+Total FICA:     $474.07 
+Total net:   $33,767.61 
+
+                                                                                        Page 5
+

@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include "../lib/l5.h"
+#include <dlfcn.h>
+
+int main() {
+
+        void *handle;
+        char *err;
+
+        int (*gcd_d)(int m, int n);
+        int (*mul_d)(int m, int n);
+        int (*exp_d)(int m, int n);
+        int (*div_d)(int m, int n);
+
+        handle = dlopen("./libl5.so", RTLD_LAZY);
+        if (handle == (void*)0) {
+                        fputs(dlerror(), stderr);
+                        exit(-1);
+        }
+
+        gcd_d = dlsym(handle, "gcd");
+        err = dlerror();
+        if (err != NULL) {
+                        fputs (err, stderr);
+                        exit(-1);
+        }
+
+        mul_d = dlsym(handle, "mul");
+        err = dlerror();
+        if (err != NULL) {
+                        fputs (err, stderr);
+                        exit(-1);
+        }
+
+        exp_d = dlsym(handle, "exp");
+        err = dlerror();
+        if (err != NULL) {
+                        fputs (err, stderr);
+                        exit(-1);
+        }
+
+        div_d = dlsym(handle, "div");
+        err = dlerror();
+        if (err != NULL) {
+                        fputs (err, stderr);
+                        exit(-1);
+        }
+
+        printf("\n\t\tFranklin Leung\n");
+        printf("\t\t     Lab 5\n\n");
+
+        int a, b, i;
+        for (i = 0; i < 6; i++) {
+                scanf("%d %d", &a, &b);
+                printf("GCD(%3d, %3d) : %4d\n", a, b, (*gcd_d)(a, b));
+        }
+        printf("\n");
+        for (i = 0; i < 4; i++) {
+                scanf("%d %d", &a, &b);
+                printf("Mul(%3d, %3d) : %4d\n", a, b, (*mul_d)(a, b));
+        }
+        printf("\n");
+        for (i = 0; i < 4; i++) {
+                scanf("%d %d", &a, &b);
+                printf("Exp(%3d, %3d) : %4d\n", a, b, (*exp_d)(a, b));
+        }
+        printf("\n");
+        for (i = 0; i < 5; i++) {
+                scanf("%d %d", &a, &b);
+                printf("Div(%3d, %3d) : %4d\n", a, b, (*div_d)(a, b));
+        }
+
+        dlclose(handle);
+        return 0;
+}

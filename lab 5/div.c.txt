@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int div(int m, int n) {
+        if (n == 0)
+                exit(1);
+        if (n == 1)
+                return m;
+        return (m >= n) ? 1 + div(m - n, n) : 0;
+}

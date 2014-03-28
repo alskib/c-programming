@@ -1,0 +1,22 @@
+lab2: src/l2m.c libl2.so
+        gcc -o lab2 src/l2m.c -L. -ll2 -lm
+
+libl2.so : calcFICA.o calcGross.o newPage.o prettyPrint.o
+        gcc -shared -o libl2.so *.o
+
+prettyPrint.o : src/prettyPrint.c src/l2.h
+        gcc -fPIC -c src/prettyPrint.c
+
+newPage.o : src/newPage.c src/l2.h
+        gcc -fPIC -c src/newPage.c
+
+calcGross.o : src/calcGross.c src/l2.h
+        gcc -fPIC -c src/calcGross.c
+
+calcFICA.o : src/calcFICA.c src/l2.h
+        gcc -fPIC -c src/calcFICA.c
+
+.PHONY : clean
+
+clean :
+        rm *.o

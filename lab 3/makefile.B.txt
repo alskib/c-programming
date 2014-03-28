@@ -1,0 +1,8 @@
+testB: l3m.c libl3.so
+	gcc -o testB l3m.c -L. -ll3 -lm
+
+libl3.so : l3.o
+	gcc -shared -o libl3.so l3.o
+
+l3.o : l3.c
+	gcc -fPIC -c l3.c

@@ -1,0 +1,10 @@
+#ifndef __RAND_API_H
+#define __RAND_API_H
+
+extern void seedRandGenerator();
+extern float getRandFloat();
+extern int getRandInteger(int max);
+extern float getRandExponential();
+extern float getFinalRandExponential(int mean);
+
+#endif /* __RAND_API_H */

@@ -1,0 +1,15 @@
+                            Lab 1
+                        Franklin Leung
+                    Due: February 17, 2012
+                Submitted: February 17, 2012
+
+                        ACME             Wed Mar 13 13:48:35 2013
+
+Line #  Emp #  Given    Surname    YTD($)    Gross($)   FICA Tax
+
+1         342  Joe      Smith      69782.00     500.31      $0.00
+2       34256  Sam      Hopper        45.66    7823.10    $530.41
+3          34  Mary     James      60000.00    9782.00    $663.22
+4         785  Tom      Jones      69700.00     200.26      $5.56
+
+                                   Totals     18305.67   $1199.19

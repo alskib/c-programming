@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "../lib/l5.h"
+
+int main() {
+
+    printf("GCD: %d\n", gcd(25, 15));
+    printf("GCD: %d\n", gcd(27, 81));
+    printf("GCD: %d\n", gcd(9, 15));
+    printf("GCD: %d\n", gcd(625, 300));
+    printf("GCD: %d\n", gcd(625, 0));
+    printf("GCD: %d\n\n", gcd(7, 15));
+
+    printf("Mul: %d\n", mul(77, 13));
+    printf("Mul: %d\n", mul(5, 25));
+    printf("Mul: %d\n", mul(17, 1));
+    printf("Mul: %d\n\n", mul(256, 0));
+
+    return 0;
+}

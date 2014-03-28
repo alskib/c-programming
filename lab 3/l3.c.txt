@@ -1,0 +1,59 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+const double EPSILON = 0.00000001;
+
+void sphere(float radius, float *surface, float *volume) {
+        *surface = 4 * M_PI * pow(radius, 2);
+        *volume = 4 * M_PI * pow(radius, 3) / 3;
+}
+
+float volCylinder(float radius, float height) {
+        return M_PI * pow(radius, 2) * height;
+}
+
+float sumFloats(float array[], int numFloats) {
+        double sum = 0.0;
+        int i, j, temp, min;
+        for (j = 0; j < numFloats - 1; j++) {
+                sum += array[j];
+                min = j;
+                for (i = j+1; i < numFloats; i++) {
+                        if (array[i] < array[min])
+                                min = i;
+                }
+                if (min != j) {
+                        temp = array[min];
+                        array[min] = array[j];
+                array[j]         = temp;
+                }
+        }
+
+        return sum;
+}
+
+double computeSine(float angle) {
+        double radian = angle * (M_PI / 180);
+        double prevGuess;
+        double currGuess = 0;
+        int i = 0;
+
+        while(1) {
+                prevGuess = currGuess;
+                currGuess += (pow(-1, i) / factorial(2 * i + 1)) * (pow(radian, 2 * i + 1));
+                if (fabs(currGuess - prevGuess) < EPSILON)
+                        break;
+                i++;
+            }
+
+        return currGuess;
+}
+
+int factorial(int n) {
+        int i, x = 1;
+        for (i = 2; i <= n; i++)
+                x *= i;
+
+        return x;
+}

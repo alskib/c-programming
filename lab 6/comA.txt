@@ -1,0 +1,3 @@
+gcc -o nav randapi.h randapi.c navigation.c
+gcc -o life randapi.h randapi.c lifesupport.c
+gcc -o serv server.c

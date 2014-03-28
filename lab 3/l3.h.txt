@@ -1,0 +1,10 @@
+#ifndef L3_H
+#define L3_H
+
+extern void sphere(float rad, float *sur, float *vol);
+extern float volCylinder(float radius, float height);
+extern float sumFloats(float array[], int numFloats);
+extern double computeSine(float angle);
+extern int factorial(int n);
+
+#endif  /* L3_H */

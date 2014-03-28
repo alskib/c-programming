@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int gcd(int m, int n) {
+        // C = A % B;
+        //   = A - B * (A / B);
+        return (n != 0) ? gcd(n, m - mul(n, div(m, n))) : m;
+}

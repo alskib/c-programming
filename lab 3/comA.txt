@@ -1,0 +1,5 @@
+gcc -fPIC -c -Wall l3.c
+gcc -shared -o libl3.so l3.o
+gcc -o testA l3m.c -L. -ll3 -ldl -lm
+export LD_LIBRARY_PATH=./
+./testA < values.txt | tee lab3outA.txt

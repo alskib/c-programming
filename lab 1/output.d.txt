@@ -1,0 +1,8 @@
+franklin@ubuntu:~/lab1$ ./envScript.sh
+Welcome to COSC2347 C executing on host ubuntu running linux-gnu.
+Your user id is franklin in home directory /home/franklin.
+Your system is executing version 4.2.24(1)-release.
+Your current path is /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games, present working directory /home/franklin/lab1.
+Your previous working directory was .
+The process ID of the interpreter (or script) 1958
+After a 2 second nap, you have been running 2 seconds.

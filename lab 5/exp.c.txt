@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int exp(int m, int n) {
+        if (n == 0)
+                return 1;
+        if (n == 1)
+                return m;
+        return mul(m, exp(m, --n));
+}

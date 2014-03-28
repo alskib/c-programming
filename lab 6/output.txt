@@ -1,0 +1,74 @@
+Received: Breathing level adjustment data.
+Processing time elapsed: 3 seconds.
+
+Thu May  2 17:35:16 2013
+
+
+
+Received: Environment adjustment data.
+Processing time elapsed: 5 seconds.
+
+Thu May  2 17:35:25 2013
+
+
+
+Received: Breathing level adjustment data.
+Processing time elapsed: 3 seconds.
+
+Thu May  2 17:35:46 2013
+
+
+
+Received: Environment adjustment data.
+Processing time elapsed: 5 seconds.
+
+Thu May  2 17:35:55 2013
+
+
+
+Received: Breathing level adjustment data.
+Processing time elapsed: 3 seconds.
+
+Thu May  2 17:36:16 2013
+
+
+
+Received: Environment adjustment data.
+Processing time elapsed: 6 seconds.
+
+Thu May  2 17:36:26 2013
+
+
+
+Received: Breathing level adjustment data.
+Processing time elapsed: 4 seconds.
+
+Thu May  2 17:36:47 2013
+
+
+
+Received: Environment adjustment data.
+Processing time elapsed: 5 seconds.
+
+Thu May  2 17:36:55 2013
+
+
+
+Received: Breathing level adjustment data.
+Processing time elapsed: 3 seconds.
+
+Thu May  2 17:37:16 2013
+
+
+
+Received: Environment adjustment data.
+Processing time elapsed: 5 seconds.
+
+Thu May  2 17:37:25 2013
+
+
+
+Received: Breathing level adjustment data.
+Processing time elapsed: 3 seconds.
+
+Thu May  2 17:37:46 2013

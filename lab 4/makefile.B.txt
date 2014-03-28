@@ -1,0 +1,31 @@
+testB : l4m.c libl4.so
+        gcc -o testB l4m.c -L. -ll4
+
+libl4.so : sort.o printData.o copyStruct.o psort.o printDataPtr.o arithmeticSort.o printDataArith.o
+        gcc -shared -o libl4.so sort.o printData.o copyStruct.o psort.o printDataPtr.o arithmeticSort.o printDataArith.o
+
+sort.o : sort.c l4.h
+        gcc -fPIC -c sort.c
+
+printData.o : printData.c l4.h
+        gcc -fPIC -c printData.c
+
+copyStruct.o : copyStruct.c l4.h
+        gcc -fPIC -c copyStruct.c
+
+psort.o : psort.c l4.h
+        gcc -fPIC -c psort.c
+
+printDataPtr.o : printDataPtr.c l4.h
+        gcc -fPIC -c printDataPtr.c
+
+arithmeticSort.o : arithmeticSort.c l4.h
+        gcc -fPIC -c arithmeticSort.c
+
+printDataArith.o : printDataArith.c l4.h
+        gcc -fPIC -c printDataArith.c
+
+.PHONY : clean
+
+clean :
+        rm *.o

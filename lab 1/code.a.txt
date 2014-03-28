@@ -1,0 +1,15 @@
+Group 1:
+
+Hard coding would make the numbers the least accessible, and depending on the amount of error checking, could lead to compilation errors if the number format is not the expected type. Any changes to a hard coded number would require a recompilation of the code (for compiled languages, like C). There are also inherent dangers of accidentally manipulating other parts of code. This does restrict access to programmers only with access to the direct source code, as opposed to regular users.
+
+Group 2:
+
+Using constants does provide a small level of protection against the user, minimizing accidental changes in other places of code. Also, if SOP does decree using constants, can help maintain a level of consistency in code across the company. This also requires direct source code access.
+
+Group 3:
+
+This option of using an external file is much easier for the end-user to use as it allows non-programmers to change the file, and the source code does not need to be shared (and all the other work involving having the end-user be in an environment to compile code). The downside to this is the extra error checking required for the external editable file. If it's a simple text file, there will need to be checks for data type and formatting and whatnot, similar to problems that groups 1 and 2 face.
+
+A more foolproof solution would be to have a second simple program that only allows changing of the values, but only through a GUI with checks at the application level that give responsive and immediate feedback on whether or not the values the user input are in the correct format. The values written by this second program would be stored in a special file that is not correctly read by a typical text editor, eliminating the chance that the user will put it junk values.
+
+I think that given the simplicity of the second program, it would not need to be updated often (if at all), strictly controls user input, is easy to use for the end-user, and allows the source code to remain hidden for the programmer's use only.

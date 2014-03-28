@@ -1,0 +1,22 @@
+GCD: 5
+GCD: 27
+GCD: 3
+GCD: 25
+GCD: 625
+GCD: 1
+
+Mul: 1001
+Mul: 125
+Mul: 17
+Mul: 0
+
+Exp: 1
+Exp: 243
+Exp: 625
+Exp: 1
+
+Div: 6
+Div: 5
+Div: 0
+Div: 6
+Div: 0
